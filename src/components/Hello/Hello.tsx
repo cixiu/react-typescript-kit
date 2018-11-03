@@ -1,7 +1,8 @@
 import React from 'react'
 import { message } from 'antd'
 
-import * as styles from './index.scss'
+import logo from '../../logo.svg'
+import * as classes from './index.scss'
 
 class Hello extends React.Component {
   componentDidMount() {
@@ -10,8 +11,9 @@ class Hello extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className={styles.text}>Hello World!!</div>
+      <div className={classes.text}>
+        <img className={classes.logo} src={logo} alt="react logo" />
+        <div>Hello React And Typescript</div>
       </div>
     )
   }

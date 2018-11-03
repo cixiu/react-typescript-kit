@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader'
 
 import Hello from './components/Hello/Hello'
 
-import * as styles from './App.scss'
+import * as classes from './App.scss'
 
 const lazy = (React as any).lazy
 const Suspense = (React as any).Suspense
@@ -37,9 +37,9 @@ class App extends React.Component {
       <div>
         <Hello />
 
-        <div className={styles.appRouter}>
-          <Link to="/a" className={styles.routerLink}>A路由</Link>
-          <Link to="/b" className={styles.routerLink}>B路由</Link>
+        <div className={classes.appRouter}>
+          <Link to="/a" className={classes.routerLink}>A路由</Link>
+          <Link to="/b" className={classes.routerLink}>B路由</Link>
         </div>
 
         <Switch>

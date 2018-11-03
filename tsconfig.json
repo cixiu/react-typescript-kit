@@ -35,8 +35,13 @@
     // 若有未使用的局部变量则抛错。
     "noUnusedLocals": true,
     // 启用实验性的ES装饰器。
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "typings/*"]
+    }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build", "server"]
+  "files": ["images.d.ts"],
+  "include": ["src/**/*", "typings/**/*"],
+  "exclude": ["node_modules", "build"]
 }
