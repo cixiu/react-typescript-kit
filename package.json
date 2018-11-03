@@ -1,16 +1,16 @@
 {
   "name": "react-start-ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "react的typescript脚手架",
+  "main": "src/index.tsx",
+  "keywords": ["react", "typescript", "react-typescript", "react-typescript-kit"],
+  "author": "cixiu",
+  "license": "MIT",
   "scripts": {
     "start": "yarn run dev",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.config.dev.js",
     "build": "node build/build.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "antd": "^3.10.3",
     "react": "^16.6.0",
