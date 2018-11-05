@@ -32,10 +32,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts', '.json'],
     alias: {
       '@': resolve('src'),
-      store: resolve('src/store'),
-      pages: resolve('src/pages'),
-      components: resolve('src/components'),
-      api: resolve('src/api'),
+      '@store': resolve('src/store'),
+      '@pages': resolve('src/pages'),
+      '@components': resolve('src/components'),
+      '@api': resolve('src/api'),
     },
   },
   module: {

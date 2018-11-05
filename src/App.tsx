@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
-import Hello from './components/Hello/Hello'
+import Hello from '@components/Hello/Hello'
 
 import * as classes from './App.scss'
 

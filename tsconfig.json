@@ -38,7 +38,12 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*", "typings/*"]
+      "*": ["node_modules/*", "typings/*"],
+      // webpack 配置的 alias 别名映射
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@store/*": ["./src/store/*"],
+      "@api/*": ["./src/api/*"]
     }
   },
   "files": ["images.d.ts"],

@@ -22,7 +22,7 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: 'static/js/[name].js',
     // 如果没有给chunk命名，[name] 是一个自动分配的、可读性很差的id
-    chunkFilename: 'static/js/[name].chunk.js', 
+    chunkFilename: 'static/js/[name].chunk.js',
     publicPath:
       process.env.NODE_ENV === 'production'
         ? config.build.assetsPublicPath
@@ -32,10 +32,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts', '.json'],
     alias: {
       '@': resolve('src'),
-      store: resolve('src/store'),
-      pages: resolve('src/pages'),
-      components: resolve('src/components'),
-      api: resolve('src/api'),
+      '@store': resolve('src/store'),
+      '@pages': resolve('src/pages'),
+      '@components': resolve('src/components'),
+      '@api': resolve('src/api'),
     },
   },
   module: {
@@ -54,7 +54,10 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               babelrc: true,
-              plugins: ['react-hot-loader/babel', '@babel/plugin-syntax-dynamic-import'],
+              plugins: [
+                'react-hot-loader/babel',
+                '@babel/plugin-syntax-dynamic-import',
+              ],
             },
           },
           {
@@ -162,9 +165,9 @@ module.exports = {
           // minSize: 0,
           priority: -20,
           enforce: true,
-          reuseExistingChunk: true
-        }
-      }
+          reuseExistingChunk: true,
+        },
+      },
     },
     // Keep the runtime chunk seperated to enable long term caching
     // https://twitter.com/wSokra/status/969679223278505985
@@ -199,9 +202,7 @@ module.exports = {
         NODE_ENV: JSON.stringify('development'),
       },
     }),
-    new webpack.WatchIgnorePlugin([
-      /scss\.d\.ts$/
-    ]),
+    new webpack.WatchIgnorePlugin([/scss\.d\.ts$/]),
     // HMR(热更新)后显示正确的模块名字，在开发环境下使用较好
     new webpack.NamedModulesPlugin(),
     // 确保包括错误的资源都不会被emit
