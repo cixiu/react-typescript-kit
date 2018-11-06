@@ -189,9 +189,9 @@ module.exports = {
         if (severity !== 'error') return
         const error = errors[0]
         notifier.notify({
-          title: 'Webpack error',
-          message: severity + ': ' + error.name,
+          title: 'Webpack Build Error',
           subtitle: error.file || '',
+          message: severity + ': ' + error.name,
           icon: config.dev.ICON,
         })
       },

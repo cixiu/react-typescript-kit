@@ -21,7 +21,7 @@ module.exports = {
     // 如何需要cssSourceMap,可以设置
     cssSourceMap: false,
     // 打包出错的配合node-notifier库和friendly-errors-webpack-plugin插件提示的icon
-    ICON: path.join(__dirname, 'logo.png'),
+    ICON: path.join(__dirname, '../build/error.png'),
   },
   // 打包时的变量
   build: {
