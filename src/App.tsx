@@ -1,13 +1,10 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
 import Hello from '@components/Hello/Hello'
 
 import * as classes from './App.scss'
-
-const lazy = (React as any).lazy
-const Suspense = (React as any).Suspense
 
 const A = lazy(() => import(/* webpackChunkName: 'A' */ './pages/A/A'))
 const B = lazy(() => import(/* webpackChunkName: 'B' */ './pages/B/B'))
