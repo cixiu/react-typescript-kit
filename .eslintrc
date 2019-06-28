@@ -1,0 +1,36 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "react-app",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "@typescript-eslint/semi": "error",
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "indent": "off",
+    "no-param-reassign": "off",
+    "no-console": "off"
+  }
+}

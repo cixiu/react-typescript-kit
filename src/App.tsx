@@ -1,51 +1,33 @@
-import React, { lazy, Suspense } from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
-import { hot } from 'react-hot-loader'
+import { hot } from 'react-hot-loader/root';
+import React from 'react';
+import { Button } from 'antd';
 
-import Hello from '@components/Hello/Hello'
+import logo from './logo.svg';
+import './App.css';
+import style from './index.module.css';
+import styleScss from './index.module.scss';
 
-import * as classes from './App.scss'
+const App: React.FC = (): JSX.Element => (
+  <div className="">
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+        Edit <code>src/App.tsx</code> and save to reload.
+      </p>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React!!!##GGTTGG
+      </a>
+      <p className={style.text}>css modules style样式</p>
+      <p className={styleScss.text}>scss modules style样式22</p>
+      <p className={styleScss.title}>scss modules style Title 样式22</p>
+      <Button type="primary">这是一个antd的组件</Button>
+    </header>
+  </div>
+);
 
-const A = lazy(() => import(/* webpackChunkName: 'A' */ './pages/A/A'))
-const B = lazy(() => import(/* webpackChunkName: 'B' */ './pages/B/B'))
-
-const AsyncAComponent = () => {
-  return (
-    <Suspense fallback={<div>Loading</div>}>
-      <A />
-    </Suspense>
-  )
-}
-
-const AsyncBComponent = () => {
-  return (
-    <Suspense fallback={<div>Loading</div>}>
-      <B />
-    </Suspense>
-  )
-}
-
-@hot(module)
-class App extends React.Component {
-  componentDidMount() {}
-
-  render() {
-    return (
-      <div>
-        <Hello />
-
-        <div className={classes.appRouter}>
-          <Link to="/a" className={classes.routerLink}>A路由</Link>
-          <Link to="/b" className={classes.routerLink}>B路由</Link>
-        </div>
-
-        <Switch>
-          <Route path="/a" component={AsyncAComponent} />
-          <Route path="/b" component={AsyncBComponent} />
-        </Switch>
-      </div>
-    )
-  }
-}
-
-export default App
+export default hot(App);
