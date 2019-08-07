@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "format": "prettier-eslint \"./src/*.*\"",
     "test": "node scripts/test.js"
   },
   "dependencies": {
@@ -78,6 +79,7 @@
     "postcss-preset-env": "6.6.0",
     "postcss-safe-parser": "4.0.1",
     "prettier": "^1.18.2",
+    "prettier-eslint-cli": "^5.0.0",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",

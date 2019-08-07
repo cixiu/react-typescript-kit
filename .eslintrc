@@ -20,7 +20,12 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "@typescript-eslint/semi": "error",
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/prefer-interface": "off",
