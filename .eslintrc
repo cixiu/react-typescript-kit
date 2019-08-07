@@ -18,6 +18,8 @@
     "prettier"
   ],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": ["error"],
     "@typescript-eslint/semi": "error",
     "@typescript-eslint/indent": ["error", 2],
@@ -29,8 +31,11 @@
         "allowTypedFunctionExpressions": true
       }
     ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-plusplus": "off",
     "indent": "off",
     "no-param-reassign": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "import/no-unresolved": "off"
   }
 }

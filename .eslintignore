@@ -1,6 +1,7 @@
 config/*
 scripts/*
 typings/*
+src/lib/*
 *.module.css.d.ts
 *.module.scss.d.ts
 *.module.sass.d.ts

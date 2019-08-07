@@ -1,0 +1,162 @@
+.test-btn {
+  margin-right: 20px;
+}
+
+.customSelected {
+  border: 2px solid red;
+}
+
+.group-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 5px solid grey;
+}
+
+.group-btn-list {
+  display: flex;
+}
+
+.group-btn-column {
+  flex-direction: column;
+  margin-right: 20px;
+  .test-btn {
+    margin-bottom: 20px;
+  }
+}
+
+.group-btn-row {
+  flex-direction: row;
+  flex: 1;
+}
+
+.group-btn-1 {
+  justify-content: flex-start;
+  width: 300px;
+}
+
+.group-btn-2 {
+  justify-content: center;
+}
+
+.group-btn-3 {
+  justify-content: space-between;
+}
+
+.group-btn-4 {
+  justify-content: space-around;
+}
+
+.group-btn-5 {
+  flex-direction: row;
+  justify-content: space-around;
+
+  .group-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid yellow;
+
+    &:first-child {
+      .test-btn {
+        margin-bottom: 20px;
+      }
+    }
+
+    &:last-child {
+      flex-direction: row;
+    }
+  }
+}
+
+
+.container {
+  width: 900px;
+  height: 1200px;
+  border: 1px solid skyblue;
+  background-color: cornflowerblue;
+  box-sizing: border-box;
+}
+.row-no-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.row-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.top {
+  width: 900px;
+  height: 100px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  background-color: darkcyan;
+  color: white;
+}
+.item-box {
+  width: 150px;
+  height: 1000px;
+}
+.pic-box {
+  width: 750px;
+  height: 1100px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.pic-box-1 {
+  width: 200px;
+  height: 200px;
+}
+.pic-box-2 {
+  width: 200px;
+  height: 200px;
+}
+.pic-box-3 {
+  margin: 30px 0;
+}
+.pic-1 {
+  width: 280px;
+  height: 200px;
+  background-color: coral;
+}
+.pic-2 {
+  width: 200px;
+  height: 60px;
+  background-color: darkgoldenrod;
+}
+.pic-3 {
+  width: 90px;
+  height: 90px;
+  background-color: mediumslateblue;
+}
+.pic-4 {
+  width: 80px;
+  height: 160px;
+  background-color: rosybrown;
+}
+.pic-5 {
+  width: 110px;
+  height: 55px;
+  background-color: teal;
+}
+.active {
+  border: 2px solid black;
+}
